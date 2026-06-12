@@ -1,4 +1,4 @@
-import ServiceDetailLayout from "@/components/ServiceDetailLayout";
+import ServiceDetailPage from "@/components/ServiceDetailPage";
 import { getServiceBySlug } from "@/lib/servicesConfig";
 
 const service = getServiceBySlug("top-tier-detail");
@@ -10,7 +10,7 @@ export default function TopTierDetailPage() {
 
   return (
     <main className="text-white min-h-screen">
-      <ServiceDetailLayout service={service} />
+      <ServiceDetailPage service={service} />
 
     </main>
   );

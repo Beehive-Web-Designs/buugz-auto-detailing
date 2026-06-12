@@ -128,7 +128,7 @@ export default function HamburgerNav() {
                       setServicesExpanded(false);
                     }}
                     className={`brand-font text-base tracking-widest transition-colors py-2 ${
-                      pathname === link.href ? "text-focus" : "text-white/80 hover:text-focus"
+                      pathname === link.href ? "text-focus" : "text-gray-300 hover:text-focus"
                     }`}
                   >
                     {link.label}

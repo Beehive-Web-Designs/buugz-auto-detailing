@@ -9,10 +9,10 @@ export default function ServicesDetailLayout({
   children: ReactNode;
 }) {
   return (
-    <main className="text-white min-h-screen">
+    <div className="text-white min-h-screen">
       {children}
       <CTA />
       <Footer />
-    </main>
+    </div>
   );
 }

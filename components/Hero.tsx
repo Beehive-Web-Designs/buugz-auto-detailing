@@ -1,21 +1,17 @@
-"use client";
-
-import Image from "next/image";
 import Link from "next/link";
-import { Zap } from "lucide-react";
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-      {/* Skewed background image */}
       <div className="absolute right-0 top-0 w-3/4 h-full z-0 skew-box translate-x-20 origin-top-right">
-        <div className="w-full h-full bg-black relative overflow-hidden ">
-          <Image
-            src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?q=80&w=2070&auto=format&fit=crop"
-            alt="Luxury Car"
-            fill
-            className="object-cover opacity-60 scale-110"
-            priority
+        <div className="w-full h-full bg-black relative overflow-hidden">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/hero.jpg"
+            alt=""
+            decoding="async"
+            fetchPriority="high"
+            className="absolute inset-0 h-full w-full object-cover opacity-60 scale-110"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent" />
         </div>
@@ -35,7 +31,7 @@ export default function Hero() {
 
           <div className="flex items-start gap-12 mt-12">
             <div className="max-w-sm">
-              <p className="text-xl text-gray-400 leading-relaxed font-light mb-8">
+              <p className="text-xl text-gray-400 leading-relaxed font-normal mb-8">
                 Professional mobile auto detailing services. Attention to detail
                 and a customer-first approach for a hassle-free, satisfying
                 experience every time.

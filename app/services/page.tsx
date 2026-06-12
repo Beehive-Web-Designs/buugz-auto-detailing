@@ -40,7 +40,7 @@ export default function ServicesPage() {
               <span className="italic">OUR </span>
               <span className="italic gradient-text">SERVICES</span>
             </h1>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed font-light">
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed font-normal">
               Professional mobile auto detailing services with attention to detail
               and a customer-first approach.
             </p>
@@ -48,54 +48,55 @@ export default function ServicesPage() {
 
           {/* Size Guide */}
           <div className="mb-12">
-            <h3 className="brand-font font-black text-2xl mb-6 text-focus text-center">
+            <h2 className="brand-font font-black text-2xl mb-6 text-focus text-center">
               VEHICLE SIZE GUIDE
-            </h3>
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
               <div className="glass-panel p-6 border-l-4 border-l-focus hover:border-l-focus/80 transition-colors">
-                <div className="brand-font font-black text-6xl text-focus/30 mb-3 leading-none">
+                <div className="brand-font font-black text-6xl text-focus/60 mb-3 leading-none">
                   S
                 </div>
                 <div className="text-sm text-gray-300 font-bold mb-1">SMALL</div>
-                <div className="text-xs text-gray-500 leading-relaxed">
+                <div className="text-xs text-gray-400 leading-relaxed">
                   Small/compact vehicles
                 </div>
               </div>
               <div className="glass-panel p-6 border-l-4 border-l-focus hover:border-l-focus/80 transition-colors">
-                <div className="brand-font font-black text-6xl text-focus/30 mb-3 leading-none">
+                <div className="brand-font font-black text-6xl text-focus/60 mb-3 leading-none">
                   M
                 </div>
                 <div className="text-sm text-gray-300 font-bold mb-1">MEDIUM</div>
-                <div className="text-xs text-gray-500 leading-relaxed">
+                <div className="text-xs text-gray-400 leading-relaxed">
                   Larger sedans & Small SUVs, Small trucks
                 </div>
               </div>
               <div className="glass-panel p-6 border-l-4 border-l-focus hover:border-l-focus/80 transition-colors">
-                <div className="brand-font font-black text-6xl text-focus/30 mb-3 leading-none">
+                <div className="brand-font font-black text-6xl text-focus/60 mb-3 leading-none">
                   L
                 </div>
                 <div className="text-sm text-gray-300 font-bold mb-1">LARGE</div>
-                <div className="text-xs text-gray-500 leading-relaxed">
+                <div className="text-xs text-gray-400 leading-relaxed">
                   Full Size SUV&apos;s (3 rows), Full size trucks (Extra cabs),
                   minivans
                 </div>
               </div>
               <div className="glass-panel p-6 border-l-4 border-l-focus hover:border-l-focus/80 transition-colors">
-                <div className="brand-font font-black text-6xl text-focus/30 mb-3 leading-none">
+                <div className="brand-font font-black text-6xl text-focus/60 mb-3 leading-none">
                   XL
                 </div>
                 <div className="text-sm text-gray-300 font-bold mb-1">EXTRA LARGE</div>
-                <div className="text-xs text-gray-500 leading-relaxed">
+                <div className="text-xs text-gray-400 leading-relaxed">
                   Dually Trucks, Large Vans, Oversized trucks/suvs
                 </div>
               </div>
             </div>
-            <p className="text-center text-xs text-gray-500 italic">
+            <p className="text-center text-xs text-gray-400 italic">
               Exotics are priced after visual inspection
             </p>
           </div>
 
           {/* Services Grid */}
+          <h2 className="sr-only">Our Detailing Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => {
               const Icon = iconBySlug[service.slug];
@@ -119,13 +120,13 @@ export default function ServicesPage() {
                         {service.price}
                       </div>
                       {service.sizes && (
-                        <div className="text-sm text-gray-500 mb-2 group-hover:text-focus group-hover:font-bold transition-all duration-300 mt-1 group-hover:scale-105 inline-block">
+                        <div className="text-sm text-gray-400 mb-2 group-hover:text-focus group-hover:font-bold transition-all duration-300 mt-1 group-hover:scale-105 inline-block">
                           {service.sizes}
                         </div>
                       )}
                     </div>
                   </div>
-                  <p className="text-gray-500 leading-relaxed mb-6 text-sm group-hover:text-gray-400 transition-colors duration-300">
+                  <p className="text-gray-400 leading-relaxed mb-6 text-sm group-hover:text-gray-400 transition-colors duration-300">
                     {service.shortDescription ?? service.description}
                   </p>
                   <ul className="space-y-2 mb-4">
@@ -161,7 +162,7 @@ export default function ServicesPage() {
                     </div>
                   )}
                   {service.time && (
-                    <div className="mt-4 text-xs text-gray-500 group-hover:text-gray-400 transition-colors duration-300">
+                    <div className="mt-4 text-xs text-gray-400 group-hover:text-gray-400 transition-colors duration-300">
                       <span className="font-bold">Estimated service time:</span>{" "}
                       {service.time}
                     </div>

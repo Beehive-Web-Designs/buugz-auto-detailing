@@ -1,5 +1,3 @@
-"use client";
-
 import { Zap, Shield, Clock, Star } from "lucide-react";
 
 export default function Services() {
@@ -35,7 +33,7 @@ export default function Services() {
             <br />
             <span className="italic">EXPERIENCE</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed font-light">
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed font-normal">
             Professional mobile auto detailing with attention to detail and a
             customer-first approach.
           </p>
@@ -57,7 +55,7 @@ export default function Services() {
                     {feature.title}
                   </h3>
                 </div>
-                <p className="text-gray-500 leading-relaxed text-sm">
+                <p className="text-gray-400 leading-relaxed text-sm">
                   {feature.description}
                 </p>
               </div>
@@ -73,7 +71,7 @@ export default function Services() {
             <div className="text-sm text-gray-400 font-bold tracking-widest mb-2">
               YEARS EXPERIENCE
             </div>
-            <p className="text-xs text-gray-500">
+            <p className="text-xs text-gray-400">
               Professional expertise you can trust
             </p>
           </div>
@@ -84,7 +82,7 @@ export default function Services() {
             <div className="text-sm text-gray-400 font-bold tracking-widest mb-2">
               CUSTOMER RATING
             </div>
-            <p className="text-xs text-gray-500">
+            <p className="text-xs text-gray-400">
               Consistently perfect reviews
             </p>
           </div>
@@ -95,7 +93,7 @@ export default function Services() {
             <div className="text-sm text-gray-400 font-bold tracking-widest mb-2">
               SATISFACTION
             </div>
-            <p className="text-xs text-gray-500">
+            <p className="text-xs text-gray-400">
               Every detail matters
             </p>
           </div>

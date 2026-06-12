@@ -1,7 +1,9 @@
+import { preload } from "react-dom";
 import Footer from "@/components/Footer";
-import Image from "next/image";
 
 export default function AboutPage() {
+  preload("/tyler.jpg", { as: "image", fetchPriority: "high" });
+
   return (
     <main className="text-white min-h-screen">
       <section className="pt-32 pb-20 px-4 sm:px-6 md:px-10">
@@ -22,11 +24,13 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
             <div className="glass-panel p-8 border-2 border-focus/50 flex items-center justify-center">
               <div className="relative w-full aspect-square max-w-md">
-                <Image
-                  src="/tyler.webp"
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/tyler.jpg"
                   alt="Tyler - Owner of Buugz Auto Detailing"
-                  fill
-                  className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                  decoding="async"
+                  fetchPriority="high"
+                  className="absolute inset-0 h-full w-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 />
               </div>
             </div>
@@ -62,7 +66,7 @@ export default function AboutPage() {
                 reach out to us via text or phone call. We&apos;ll do our best to get back
                 to you as soon as we can.
               </p>
-              <p className="text-gray-500 mb-8 max-w-xl mx-auto text-sm italic">
+              <p className="text-gray-400 mb-8 max-w-xl mx-auto text-sm italic">
                 Please note: We detail part-time, so there may occasionally be a slight
                 delay in our response. But don&apos;t worry — you&apos;re important to us,
                 and we&apos;ll make sure to follow up as quickly as possible.

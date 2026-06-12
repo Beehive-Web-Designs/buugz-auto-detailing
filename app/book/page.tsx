@@ -64,6 +64,16 @@ export default function BookPage() {
 
     const form = e.currentTarget;
     const formDataObj = new FormData(form);
+
+    if (formDataObj.get("bot-field")?.toString().trim()) {
+      setFormData(initialFormData);
+      setFormState({
+        status: "success",
+        message: "We'll contact you within 24 hours to confirm your appointment.",
+      });
+      return;
+    }
+
     const params = new URLSearchParams();
     params.append("form-name", "booking");
 
@@ -120,7 +130,7 @@ export default function BookPage() {
               <br />
               <span className="italic">YOUR SPOT</span>
             </h1>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed font-light">
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed font-normal">
               Ready to transform your vehicle? Fill out the form below and
               we&apos;ll get back to you within 24 hours to confirm your
               appointment.
@@ -138,7 +148,9 @@ export default function BookPage() {
                 <p className="text-gray-400 text-lg">{formState.message}</p>
               </div>
             ) : (
-              <form
+              <>
+                <h2 className="sr-only">Booking Form</h2>
+                <form
                 name="booking"
                 method="POST"
                 action="/book"
@@ -148,12 +160,21 @@ export default function BookPage() {
                 className="space-y-6 md:space-y-8"
               >
                 <input type="hidden" name="form-name" value="booking" />
-                <p className="hidden">
-                  <label>
-                    Don&apos;t fill this out if you&apos;re human:{" "}
-                    <input name="bot-field" />
+                <div
+                  className="absolute left-[-9999px] h-px w-px overflow-hidden"
+                  aria-hidden="true"
+                >
+                  <label htmlFor="bot-field">
+                    Don&apos;t fill this out if you&apos;re human
                   </label>
-                </p>
+                  <input
+                    id="bot-field"
+                    type="text"
+                    name="bot-field"
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
+                </div>
 
                 {formState.status === "error" && (
                   <div className="flex items-start gap-3 border border-red-500/30 bg-red-500/10 p-4">
@@ -315,6 +336,7 @@ export default function BookPage() {
                   </button>
                 </div>
               </form>
+              </>
             )}
           </div>
 

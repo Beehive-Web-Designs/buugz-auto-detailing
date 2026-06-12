@@ -1,8 +1,6 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
-import { Instagram, Twitter, Facebook } from "lucide-react";
+import { Instagram } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -20,16 +18,16 @@ export default function Footer() {
               />
             </div>
           </div>
-          <p className="text-gray-500 max-w-md text-lg leading-relaxed">
+          <p className="text-gray-400 max-w-md text-lg leading-relaxed">
             Professional mobile auto detailing with over a decade of experience.
             Attention to detail and a customer-first approach for a hassle-free,
             satisfying experience every time.
           </p>
         </div>
         <div>
-          <h4 className="brand-font font-black text-xl mb-8 text-focus">
+          <h3 className="brand-font font-black text-xl mb-8 text-focus">
             LINKS
-          </h4>
+          </h3>
           <ul className="space-y-4 text-gray-400 font-bold">
             <li>
               <Link href="/services" className="hover:text-focus transition-colors">
@@ -54,9 +52,9 @@ export default function Footer() {
           </ul>
         </div>
         <div>
-          <h4 className="brand-font font-black text-xl mb-8 text-focus">
+          <h3 className="brand-font font-black text-xl mb-8 text-focus">
             SOCIAL
-          </h4>
+          </h3>
           <div className="flex gap-4">
             <a
               href="https://www.instagram.com/buugzautodetailing/"
@@ -67,28 +65,10 @@ export default function Footer() {
             >
               <Instagram className="w-5 h-5" />
             </a>
-            {/* <a
-              href="https://x.com/buugzautodetailing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-12 h-12 glass-panel flex items-center justify-center hover:text-focus transition-colors cursor-pointer"
-              aria-label="Follow us on X (Twitter)"
-            >
-              <Twitter className="w-5 h-5" />
-            </a>
-            <a
-              href="https://facebook.com/buugzautodetailing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-12 h-12 glass-panel flex items-center justify-center hover:text-focus transition-colors cursor-pointer"
-              aria-label="Follow us on Facebook"
-            >
-              <Facebook className="w-5 h-5" />
-            </a> */}
           </div>
         </div>
       </div>
-      <div className="container mx-auto px-4 sm:px-6 md:px-10 mt-16 py-8 mb-0 border-t border-white/5 text-center text-gray-500 text-sm">
+      <div className="container mx-auto px-4 sm:px-6 md:px-10 mt-16 py-8 mb-0 border-t border-white/5 text-center text-gray-400 text-sm">
         © 2026 Buugz Auto Detailing. Powered by <Link href="https://beehivewebdesigns.com" target="_blank" className="hover:text-focus transition-colors">Beehive Web Designs</Link>
       </div>
     </footer>

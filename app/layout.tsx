@@ -4,16 +4,18 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 
 const kanit = Kanit({
-  weight: ["400", "700", "900"],
-  style: ["normal", "italic"],
+  weight: ["900"],
+  style: ["normal"],
   variable: "--font-kanit",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const inter = Inter({
-  weight: ["300", "400", "700"],
+  weight: ["400", "700"],
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
