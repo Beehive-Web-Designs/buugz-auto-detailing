@@ -1,28 +1,26 @@
-import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <main className="text-white selection:bg-blue-500 min-h-screen">
-      <Nav />
-      <section className="pt-32 pb-20 px-10">
+    <main className="text-white min-h-screen">
+      <section className="pt-32 pb-20 px-4 sm:px-6 md:px-10">
         <div className="container mx-auto max-w-5xl">
           {/* Header */}
           <div className="text-center mb-20">
-            <div className="inline-block bg-blue-600 text-black font-black px-4 py-1 mb-6 rotate-[-2deg] tracking-tighter italic">
+            <div className="inline-block bg-focus text-black font-black px-4 py-1 mb-6 rotate-[-2deg] tracking-tighter italic">
               ABOUT US
             </div>
-            <h1 className="hero-title text-white mb-6">
+            <h1 className="hero-title font-bold text-white mb-6 text-center">
               <span className="gradient-text">GET TO</span>
               <br />
-              <span className="pl-20 italic">KNOW TYLER</span>
+              <span className="italic">KNOW TYLER</span>
             </h1>
           </div>
 
           {/* Content */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
-            <div className="glass-panel p-8 border-2 border-blue-500/50 flex items-center justify-center">
+            <div className="glass-panel p-8 border-2 border-focus/50 flex items-center justify-center">
               <div className="relative w-full aspect-square max-w-md">
                 <Image
                   src="/tyler.webp"
@@ -32,11 +30,11 @@ export default function AboutPage() {
                 />
               </div>
             </div>
-            <div className="glass-panel p-12 border-2 border-blue-500/50 flex flex-col justify-center">
+            <div className="glass-panel p-12 border-2 border-focus/50 flex flex-col justify-center">
               <div className="prose prose-invert max-w-none">
                 <p className="text-xl text-gray-300 leading-relaxed mb-6">
-                  Hi, I&apos;m <span className="text-blue-400 font-bold">Tyler</span>,
-                  the proud owner of <span className="text-blue-400 font-bold">Buugz Auto Detailing</span>.
+                  Hi, I&apos;m <span className="text-focus font-bold">Tyler</span>,
+                  the proud owner of <span className="text-focus font-bold">Buugz Auto Detailing</span>.
                   With over a decade of professional detailing experience, I&apos;ve
                   honed my skills to deliver the highest quality care for every vehicle I
                   work on.
@@ -57,7 +55,7 @@ export default function AboutPage() {
 
           {/* Contact Section */}
           <div className="mt-20 text-center">
-            <div className="glass-panel p-12 border-2 border-blue-500/50">
+            <div className="glass-panel p-12 border-2 border-focus/50">
               <h2 className="brand-font font-black text-4xl mb-6">CONTACT US</h2>
               <p className="text-gray-400 mb-8 max-w-xl mx-auto text-lg">
                 Whether you have questions or want to book an appointment, feel free to
@@ -72,7 +70,7 @@ export default function AboutPage() {
               <p className="text-gray-400 mb-8">Thanks for your patience and support!</p>
               <a
                 href="/book"
-                className="inline-block px-16 py-6 gradient-bg text-black font-black text-xl tracking-tighter hover:scale-110 transition-transform shadow-[0_0_50px_rgba(0,191,255,0.4)]"
+                className="inline-block px-16 py-6 gradient-bg text-black font-black text-xl tracking-tighter hover:scale-110 transition-transform shadow-[0_0_50px_rgba(23,201,244,0.4)]"
               >
                 MESSAGE US
               </a>

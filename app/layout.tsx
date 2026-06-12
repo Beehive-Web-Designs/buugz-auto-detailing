@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Kanit, Inter } from "next/font/google";
 import "./globals.css";
+import Nav from "@/components/Nav";
 
 const kanit = Kanit({
   weight: ["400", "700", "900"],
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body
         className={`${kanit.variable} ${inter.variable} antialiased`}
       >
+        <Nav />
         {children}
       </body>
     </html>

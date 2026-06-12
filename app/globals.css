@@ -3,11 +3,13 @@
 :root {
   --background: #050505;
   --foreground: #ffffff;
+  --focus: #17c9f4;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-focus: var(--focus);
   --font-sans: var(--font-inter);
   --font-kanit: var(--font-kanit);
 }
@@ -26,14 +28,14 @@ h1, h2, h3, h4, h5, h6, .brand-font {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #00BFFF 0%, #0080FF 100%);
+  background: linear-gradient(135deg, var(--focus) 0%, #12a0c4 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gradient-bg {
-  background: linear-gradient(135deg, #00BFFF 0%, #0080FF 100%);
+  background: linear-gradient(135deg, var(--focus) 0%, #12a0c4 100%);
 }
 
 .glass-panel {
@@ -64,10 +66,20 @@ h1, h2, h3, h4, h5, h6, .brand-font {
 }
 
 .hero-title {
-  font-weight: 900;
+  font-size: 2.25rem;
   font-style: italic;
-  line-height: 0.85;
-  font-size: clamp(4rem, 10vw, 9rem);
+}
+
+@media (min-width: 640px) {
+  .hero-title { font-size: 3rem; }
+}
+
+@media (min-width: 768px) {
+  .hero-title { font-size: 3.75rem; }
+}
+
+@media (min-width: 1024px) {
+  .hero-title { font-size: 4.5rem; }
 }
 
 .floating-element {
@@ -106,6 +118,6 @@ h1, h2, h3, h4, h5, h6, .brand-font {
 }
 
 ::selection {
-  background-color: #00BFFF;
+  background-color: var(--focus);
   color: #000000;
 }

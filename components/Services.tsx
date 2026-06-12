@@ -28,11 +28,8 @@ export default function Services() {
 
   return (
     <section className="py-32 bg-[#050505] relative z-20">
-      <div className="container mx-auto px-10">
+      <div className="container mx-auto px-4 sm:px-6 md:px-10">
         <div className="text-center mb-16">
-          <div className="inline-block bg-blue-600 text-black font-black px-4 py-1 mb-6 rotate-[-2deg] tracking-tighter italic">
-            WHY BUUGZ
-          </div>
           <h2 className="brand-font font-black text-5xl md:text-7xl mb-6">
             <span className="gradient-text">PREMIUM</span>
             <br />
@@ -50,7 +47,7 @@ export default function Services() {
             return (
               <div
                 key={index}
-                className="glass-panel p-8 border-l-4 border-l-blue-500 hover:border-l-blue-400 transition-colors group"
+                className="glass-panel p-8 border-l-4 border-l-focus hover:border-l-focus/80 transition-colors group"
               >
                 <div className="mb-6">
                   <div className="w-16 h-16 gradient-bg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
@@ -69,8 +66,8 @@ export default function Services() {
         </div>
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="glass-panel p-8 border-2 border-blue-500/50 text-center">
-            <div className="brand-font font-black text-6xl text-blue-500 mb-2">
+          <div className="glass-panel p-8 border-2 border-focus/50 text-center">
+            <div className="brand-font font-black text-6xl text-focus mb-2">
               10+
             </div>
             <div className="text-sm text-gray-400 font-bold tracking-widest mb-2">
@@ -80,8 +77,8 @@ export default function Services() {
               Professional expertise you can trust
             </p>
           </div>
-          <div className="glass-panel p-8 border-2 border-blue-500/50 text-center">
-            <div className="brand-font font-black text-6xl text-blue-500 mb-2">
+          <div className="glass-panel p-8 border-2 border-focus/50 text-center">
+            <div className="brand-font font-black text-6xl text-focus mb-2">
               5.0
             </div>
             <div className="text-sm text-gray-400 font-bold tracking-widest mb-2">
@@ -91,8 +88,8 @@ export default function Services() {
               Consistently perfect reviews
             </p>
           </div>
-          <div className="glass-panel p-8 border-2 border-blue-500/50 text-center">
-            <div className="brand-font font-black text-6xl text-blue-500 mb-2">
+          <div className="glass-panel p-8 border-2 border-focus/50 text-center">
+            <div className="brand-font font-black text-6xl text-focus mb-2">
               100%
             </div>
             <div className="text-sm text-gray-400 font-bold tracking-widest mb-2">

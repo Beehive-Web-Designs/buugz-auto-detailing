@@ -22,7 +22,7 @@ export default function CTA() {
           <div className="h-full" />
         </div>
       </div>
-      <div className="container mx-auto px-10 relative z-10 text-center">
+      <div className="container mx-auto px-4 sm:px-6 md:px-10 relative z-10 text-center">
         <h2 className="brand-font font-black text-7xl md:text-9xl mb-12 tracking-tighter">
           BOOK<br />
           <span className="gradient-text italic">NOW</span>
@@ -34,13 +34,13 @@ export default function CTA() {
         <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
           <Link
             href="/book"
-            className="px-16 py-8 gradient-bg text-black font-black text-2xl tracking-tighter hover:scale-110 transition-transform shadow-[0_0_50px_rgba(0,191,255,0.4)]"
+            className="px-16 py-8 gradient-bg text-black font-black text-2xl tracking-tighter hover:scale-110 transition-transform shadow-[0_0_50px_rgba(23,201,244,0.4)]"
           >
             BOOK NOW
           </Link>
-          <div className="flex flex-col items-start px-6 border-l-2 border-blue-500">
+          <div className="flex flex-col items-start px-6 border-l-2 border-focus">
             <span className="text-white font-bold text-xl">5.0 RATING</span>
-            <div className="flex text-blue-400">
+            <div className="flex text-focus">
               <Star className="w-5 h-5 fill-current" />
               <Star className="w-5 h-5 fill-current" />
               <Star className="w-5 h-5 fill-current" />
